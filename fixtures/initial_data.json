@@ -1,0 +1,156 @@
+[
+    {
+        "model": "auth.group",
+        "pk": 1,
+        "fields": {
+            "name": "Администраторы"
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 2,
+        "fields": {
+            "name": "Менеджеры"
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 3,
+        "fields": {
+            "name": "Сотрудники"
+        }
+    },
+    {
+        "model": "users.customuser",
+        "pk": 2,
+        "fields": {
+            "username": "manager",
+            "email": "manager@example.com",
+            "password": "mng12345",
+            "is_superuser": false,
+            "is_staff": true,
+            "is_active": true,
+            "role": "manager",
+            "groups": [2]
+        }
+    },
+    {
+        "model": "users.customuser",
+        "pk": 3,
+        "fields": {
+            "username": "user",
+            "email": "user@example.com",
+            "password": "user12345",
+            "is_superuser": false,
+            "is_staff": false,
+            "is_active": true,
+            "role": "employee",
+            "groups": [3]
+        }
+    },
+    {
+        "model": "network.networkelement",
+        "pk": 1,
+        "fields": {
+            "level": 0,
+            "name": "Завод Электроника",
+            "email": "factory@example.com",
+            "phone": "1234567890",
+            "country": "Россия",
+            "region": "Московская область",
+            "city": "Москва",
+            "street": "Ленина",
+            "house_number": "10",
+            "postal_code": "123456",
+            "debt": "0.0",
+            "created_at": "2024-01-01T00:00:00Z",
+            "supplier": null
+        }
+    },
+    {
+        "model": "network.networkelement",
+        "pk": 2,
+        "fields": {
+            "level": 1,
+            "name": "Розничная сеть Электроника",
+            "email": "retail@example.com",
+            "phone": "0987654321",
+            "country": "Россия",
+            "region": "Ленинградская область",
+            "city": "Санкт-Петербург",
+            "street": "Невский проспект",
+            "house_number": "20",
+            "postal_code": "654321",
+            "debt": "10000.0",
+            "created_at": "2024-01-01T00:00:00Z",
+            "supplier": 1
+        }
+    },
+    {
+        "model": "network.networkelement",
+        "pk": 3,
+        "fields": {
+            "level": 2,
+            "name": "ИП Иванов",
+            "email": "ivanov@example.com",
+            "phone": "1122334455",
+            "country": "Россия",
+            "region": "Новосибирская область",
+            "city": "Новосибирск",
+            "street": "Кирова",
+            "house_number": "5",
+            "postal_code": "987654",
+            "debt": "5000.0",
+            "created_at": "2024-01-01T00:00:00Z",
+            "supplier": 2
+        }
+    },
+    {
+        "model": "network.product",
+        "pk": 1,
+        "fields": {
+            "name": "Смартфон X1",
+            "model": "X1-2024",
+            "release_date": "2024-01-15",
+            "price": "20000.0",
+            "manufacturer_country": "Россия",
+            "network_element": 1
+        }
+    },
+    {
+        "model": "network.product",
+        "pk": 2,
+        "fields": {
+            "name": "Ноутбук Z2",
+            "model": "Z2-Pro",
+            "release_date": "2023-11-01",
+            "price": "60000.0",
+            "manufacturer_country": "Китай",
+            "network_element": 1
+        }
+    },
+    {
+        "model": "network.product",
+        "pk": 3,
+        "fields": {
+            "name": "Телевизор OLED",
+            "model": "OLED-55",
+            "release_date": "2024-02-20",
+            "price": "50000.0",
+            "manufacturer_country": "Южная Корея",
+            "network_element": 2
+        }
+    },
+    {
+        "model": "network.product",
+        "pk": 4,
+        "fields": {
+            "name": "Планшет T3",
+            "model": "T3-Mini",
+            "release_date": "2024-03-10",
+            "price": "30000.0",
+            "manufacturer_country": "Япония",
+            "network_element": 3
+        }
+    }
+]
